@@ -1,0 +1,33 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+*.rej
+*~
+
+# Environment / secrets (never commit)
+.env
+.env.*
+
+# Node / web builds
+node_modules/
+dist/
+build/
+out/
+.next/
+.turbo/
+.cache/
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
