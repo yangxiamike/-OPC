@@ -1,0 +1,83 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "update_multi": true,
+      "wide_screen_mode": true
+    },
+    "header": {
+      "template": "blue",
+      "title": {
+        "tag": "plain_text",
+        "content": "【决策审批】{{title}}"
+      }
+    },
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**结论**\n{{conclusion}}"
+      },
+      {
+        "tag": "markdown",
+        "content": "**关键风险**\n{{risk}}"
+      },
+      {
+        "tag": "markdown",
+        "content": "**推荐项**\n{{recommendation}}"
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "action",
+        "actions": [
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "✅ 同意（主路径）"
+            },
+            "type": "primary",
+            "value": {
+              "decision": "A",
+              "decision_text": "同意主路径"
+            }
+          },
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "🔁 方案B（备选）"
+            },
+            "type": "default",
+            "value": {
+              "decision": "B",
+              "decision_text": "走方案B"
+            }
+          },
+          {
+            "tag": "button",
+            "text": {
+              "tag": "plain_text",
+              "content": "❌ 退回补充"
+            },
+            "type": "danger",
+            "value": {
+              "decision": "C",
+              "decision_text": "退回补充信息"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "点击后需回写：拍板人｜拍板时间｜选择项｜下一执行节点"
+          }
+        ]
+      }
+    ]
+  }
+}

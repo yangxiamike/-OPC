@@ -1,0 +1,9 @@
+# OPC current work environment
+#
+# This environment is for project delivery and internal OPC tools.
+# Keep Hermes runtime dependencies in the Hermes dedicated environment.
+
+beautifulsoup4==4.12.3
+httpx==0.28.1
+python-dotenv==1.2.1
+requests==2.33.0

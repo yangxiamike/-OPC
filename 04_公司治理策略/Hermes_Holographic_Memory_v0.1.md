@@ -21,11 +21,10 @@ Holographic Memory 是 Hermes 自带的记忆能力，不另行重造系统。
 
 搭建 CEO 团队时，Hermes Agents CLI 应为以下核心 Agent 启用 Holographic Memory：
 
+- 托特董秘 Agent。
 - CEO / PM Agent。
-- Research / Intelligence Agent。
-- Strategy / Conversion Agent。
-- Design / UX Agent。
-- Development & Test Agent。
+- Growth / Strategy Agent。
+- Build / Delivery Agent。
 - QA / Gate Agent。
 
 每个长期 Agent 使用独立 profile、独立 SOUL.md、独立 MEMORY.md 和独立记忆空间。
@@ -45,6 +44,8 @@ Holographic Memory 只记录对未来执行有帮助的稳定信息：
 - 已验证的行业观察。
 
 临时闲聊、一次性任务、未经验证的猜测，不进入长期记忆。
+
+飞书消息、群聊事件和 webhook 入站内容不得直接写入长期记忆。只有经过脱敏、复盘，并被写回 OPC 正式文件或明确标注为稳定经验后，才允许提炼进 Holographic Memory。
 
 ## 4. 不记什么
 
@@ -84,6 +85,7 @@ Holographic Memory 只记录对未来执行有帮助的稳定信息：
 - 不把敏感信息写入记忆。
 - 不让记忆覆盖 OPC 正式文件。
 - 需要长期生效的规则，先写回 OPC，再同步给 Agent。
+- 飞书事件只作为触发源和通知源，不作为 Memory 权威事实源。
 
 CLI 负责运行记忆能力；OPC 负责保存公司事实。
 
@@ -96,6 +98,7 @@ CLI 负责运行记忆能力；OPC 负责保存公司事实。
 1. 记忆有没有让 Agent 更稳。
 2. 记忆有没有污染角色或制造误判。
 3. 哪些经验需要从记忆提炼回 OPC。
+4. 是否出现 OPC、Hermes profile、Memory、飞书或项目文件之间的版本不一致；如出现，必须归一事实源，严重情况上报夏董。
 
 ## 8. 定案
 
