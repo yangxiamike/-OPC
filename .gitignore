@@ -8,10 +8,29 @@ Desktop.ini
 *.tmp
 *.temp
 *.bak
+*.bak-*
 *.old
 *.orig
 *.rej
 *~
+
+# Local runtime/audit output (do not commit raw gateway state)
+.local/
+run-state/
+runtime/
+*.pid
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+
+# Feishu local-only exports / raw snapshots
+feishu_local/
+feishu_runtime/
+feishu_group_audit.local.md
+*_raw_feishu_*.json
+*_feishu_runtime_*.json
 
 # Environment / secrets (never commit)
 .env
